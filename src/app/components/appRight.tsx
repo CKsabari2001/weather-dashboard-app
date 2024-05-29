@@ -26,46 +26,46 @@ function AppRight({ data, forecastData }: AppRightProps) {
     <div className="AppRight">
       <Heading>Todays Highlight</Heading>
       <div className=" grid grid-cols-1 sm:max-md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-10 mt-5">
-        <div className="card bg-base-100 shadow-xl p-5 min-h-60">
+        <div className="card bg-base-100 shadow-xl p-5 min-h-60 text-center sm:text-start">
           <H3>Wind Status</H3>
           <H2>
             {`${speed}`}
             <span>m/s</span>
           </H2>
           <H4>
-            <span className="flex items-center">
+            <span className="flex items-center justify-center sm:justify-start ">
               <img src="/icon-02.png" alt="" className="w-8 h-8 mr-2" />
               {`${deg}`}
               <span>&deg;</span>
             </span>
           </H4>
         </div>
-        <div className="card bg-base-100 shadow-xl p-5 min-h-60">
+        <div className="card bg-base-100 shadow-xl p-5 min-h-60 text-center sm:text-start">
           <H3 className="mb-5">Sunrise & Sunset</H3>
           <H3>
-            <span className=" flex items-center">
+            <span className=" flex items-center justify-center sm:justify-start">
               <img src="/icon-03.png" alt="" className="w-8 h-8 mr-2" />
               {sunriseTime}
             </span>
           </H3>
           <H3>
-            <span className=" flex items-center mt-5">
+            <span className=" flex items-center mt-5 justify-center sm:justify-start">
               <img src="/icon-04.png" alt="" className="w-8 h-8 mr-2" />
               {sunsetTime}
             </span>
           </H3>
         </div>
-        <div className="card bg-base-100 shadow-xl p-5 min-h-60">
+        <div className="card bg-base-100 shadow-xl p-5 min-h-60 text-center sm:text-start">
           <H3 className="mb-0">Humidity</H3>
-          <H2 className=" flex items-center">
+          <H2 className=" flex items-center justify-center sm:justify-start">
             <img src="/icon-05.png" alt="" className="w-12 h-12 mr-2" />
             {`${humidity}%`}
           </H2>
           <H3>{humidity > 80 ? "high⚡" : "Normal😊" || humidity < 30 ? "Low😁" : "Normal😊"}</H3>
         </div>
-        <div className="card bg-base-100 shadow-xl p-5 min-h-60">
+        <div className="card bg-base-100 shadow-xl p-5 min-h-60 text-center sm:text-start">
           <H3 className="">Visibility</H3>
-          <H2 className="flex items-center">{`${km}km`}</H2>
+          <H2 className="flex items-center justify-center sm:justify-start">{`${km}km`}</H2>
           <H3>{visibility < 3000 ? "low🥹" : "Normal😊" || visibility > 8000 ? "High😁" : "Normal😊"}</H3>
         </div>
       </div>

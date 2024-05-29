@@ -55,11 +55,11 @@ export const H4 = styled.h4`
 export const H2s = styled.h5`
   background-image: "../../../public/img-01.jpg";
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
   @media (min-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   color: ${colors.secondary};
 `;
@@ -80,6 +80,11 @@ export const Heading = styled.h2`
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
+
+  @media (max-width: 640px) {
+    text-align: center;
+  }
+
   @media (min-width: 768px) {
     font-size: 2rem;
   }
