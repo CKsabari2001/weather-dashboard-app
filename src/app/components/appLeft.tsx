@@ -9,6 +9,11 @@ function AppLeft({ setIsLoading, setError, setData, data }: AppLeftProps) {
   const [value, setValue] = useState("");
 
   const handleClick = async () => {
+    if (value === "") {
+      setError("Please enter a valid Place Name");
+      return;
+    }
+
     setIsLoading(true);
     try {
       const res = await axios.post("/api/weather/getSearchWeather", { value: value });
@@ -28,6 +33,7 @@ function AppLeft({ setIsLoading, setError, setData, data }: AppLeftProps) {
       }
     } finally {
       setIsLoading(false);
+      setValue("");
     }
   };
 
@@ -85,7 +91,6 @@ function AppLeft({ setIsLoading, setError, setData, data }: AppLeftProps) {
 
       <div className="mt-5 flex items-center gap-3">
         <Image src="/icon-01.png" width={40} height={40} alt="" />
-
         <H4>{`${cloudsName} - ${cloudPct}%`}</H4>
       </div>
 
